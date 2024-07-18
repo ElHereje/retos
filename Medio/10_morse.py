@@ -74,7 +74,7 @@ def codifica_morse(texto):
     for caracter in texto:
         caracter_codificado = texto_a_morse(caracter)
         morse += caracter_codificado
-    return morseç
+    return morse
 
 def morse_a_texto(morse):
     for caracter in equivalencias:
@@ -92,8 +92,19 @@ def codifica_texto(morse):
     return texto
 
 
-frase = input('introduce Frase a codificar: ')
-print(f'Texto en Morse: {codifica_morse(frase)}')
+
+entrada = input('Codificar o descodificar (C - D):').upper()
+
+match entrada:
+    case 'C':
+        frase = input('introduce Frase a codificar: ')
+        print(f'Texto en Morse: {codifica_morse(frase)}')
+    case 'D':
+        codigo = input('introduce código a descifrar: ')
+        print(f'Morse descifrado: {codifica_texto(codigo)}')
+
+
+
     
     
     
