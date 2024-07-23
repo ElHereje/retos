@@ -7,7 +7,17 @@
 #  * Ejemplo: Ana lleva al oso la avellana.
 #  */
 
-str1 = input('Introduce un frase: ')
+str1 = (input('Introduce un frase: ')).lower()
 
-lisa = str1.split()
-print(lisa)
+lisa = str1.replace(' ','')
+lisa_invertida = lisa
+lisa = list(lisa)
+lisa_invertida = list(lisa_invertida)
+lisa_invertida.reverse()
+
+if lisa == lisa_invertida:
+    print('Es un palíndromo')
+else:
+    print('No lo es')
+        
+
