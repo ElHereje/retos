@@ -16,7 +16,7 @@ for digito in num:
     print(f'{digito} elevado a {e} --> acumulado = {res}')
     
 
-if res == num:
+if res == int(num):
     print(f'{num} es un número de Armstrong.')
 else:
     print(f'{num} NO es un número de Armstrong.')
